@@ -17,7 +17,7 @@ nav {
     background-color: #FFFFFF;
     padding: 15px 100px;
     text-align: center;
-    border-bottom: #0000005d solid 2px ;
+    border-bottom: #6666665d solid 2px ;
     position: fixed;
     display: flex;
     width: 100%;
@@ -26,12 +26,15 @@ nav {
 }
 
 .menu1 {
-display: none;
+display: flex;
 cursor: pointer;
 }
 
 
-
+#check {
+   position: absolute;
+   z-index: 1;
+}
 nav .nav-links {
     display: flex;
     align-items: center;
@@ -49,8 +52,8 @@ nav .nav-links a {
 nav .menu {
     display: block;
     color: #000000;
-    font-size: 30px;
-    padding: 17px 0;
+    font-size: 39px;
+    padding: 27px 30px;
 }
 
 nav .logo img {
@@ -112,6 +115,10 @@ header h1 span {
 header .header-main button i {
  font-size: 23px;
  
+}
+
+.mb {
+    display: none;
 }
 
 header .header-main p {
@@ -193,6 +200,8 @@ header .header-main .btn1 {
     margin-top: 50px;
     gap: 20px;
 }
+
+ 
 
 .container .card-btn button {
     background-color: #FAF3E9;
@@ -844,6 +853,42 @@ border:  #b6b6b6 solid 2px;
 
 @media screen and (max-width: 940px) {
 
+       .mb {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #FAF3E9;
+        width: 70%;
+        height: 120%;
+        z-index: 1;
+        align-items: center;
+        flex-direction: column;
+       padding: 40px 0;
+        border-right: #000000 solid 2px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     
+    }
+
+     .mb.show {
+        display: flex !important;
+        animation: show 0.3s ease-in-out;
+    }
+
+
+    @keyframes show {
+       from {
+        width: 20%;
+        opacity: 0;
+        }
+        to {
+          width: 70%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            opacity: 1;
+        }
+        
+    }
+
     .container2 .process {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -964,6 +1009,81 @@ border:  #b6b6b6 solid 2px;
         display: none;
       
     }
+    
+
+      .mb .logo img {
+        width: 190px;
+        height: 65px;
+        margin: 0 auto;
+       
+
+      }
+
+       .mb ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+}
+
+  .mb ul li a{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin-top: 50px;
+        font-weight: 400;
+        align-items:   center;
+        justify-content: center;
+    }
+    
+
+    .mb ul li {
+        font-size: 20px;
+        color: #000000;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+       
+        
+        
+      
+    }
+
+   
+
+    .mb ul li a {
+        text-decoration: none;
+        color: #000000;
+     background-color: #6b3e2a00;
+        color: #000000;
+        padding: 20px 25px;
+        width: 200PX;
+       border-radius: 30PX;
+      transition: ease-in-out 0.3s;
+        gap: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+      
+    }
+
+     .mb ul li a:hover {
+        background-color: #6B3E2A;
+        color: #fff;
+
+     }
+       
+
+    .mb .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+    }
 
     header .header-main h1 {
         font-size: 50px;
@@ -983,6 +1103,7 @@ border:  #b6b6b6 solid 2px;
     nav .nav-links {
         display: none;
     }
+   
 
     nav .menu1 {
        display: block;
@@ -1516,7 +1637,125 @@ footer {
         padding: 100px 20px;
         height: 170vh;
     }
+
+    nav {
+        z-index: 0;
+    }
+
+    .mb {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #FAF3E9;
+        width: 70%;
+        height: 120%;
+        z-index: 1;
+        align-items: center;
+        flex-direction: column;
+       padding: 100px 0;
+        border-right: #000000 solid 2px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     
+     
+    }
+
+    .mb.show {
+        display: flex !important;
+        animation: show 0.3s ease-in-out;
+    }
+
+    @keyframes show {
+       from {
+        width: 20%;
+        opacity: 0;
+        }
+        to {
+          width: 70%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            opacity: 1;
+        }
+        
+    }
+
+   
+
+  
+
+      .mb .logo img {
+        width: 190px;
+        height: 65px;
+        margin: 0 auto;
+       
+
+      }
+
+       .mb ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
 }
+
+  .mb ul li a{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin-top: 50px;
+        font-weight: 400;
+        align-items:   center;
+        justify-content: center;
+    }
+    
+
+    .mb ul li {
+        font-size: 20px;
+        color: #000000;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+       
+        
+        
+      
+    }
+
+   
+
+    .mb ul li a {
+        text-decoration: none;
+        color: #000000;
+     background-color: #6b3e2a00;
+        color: #000000;
+        padding: 20px 25px;
+        width: 200PX;
+       border-radius: 30PX;
+      transition: ease-in-out 0.3s;
+        gap: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+      
+    }
+
+     .mb ul li a:hover {
+        background-color: #6B3E2A;
+        color: #fff;
+
+     }
+       
+
+    .mb .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+  }
 
 @media screen and (max-width: 344px) {
 
@@ -1560,6 +1799,7 @@ footer {
         width: 300px;
 }
 
+
 footer .footer-content .detail1 .footer-logo h1 {
         font-size: 20px;
         color: #fff;
@@ -1598,7 +1838,7 @@ footer .footer-content .detail1 .footer-logo h1 {
 @media screen and (max-width: 1024px) {
     .container {
         padding: 100px 20px;
-        height: auto;
+        height: 200vh;
     }
 }
 
